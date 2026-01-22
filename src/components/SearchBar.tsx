@@ -1,9 +1,17 @@
+import {useEffect, useRef } from "react";
+
 type Props = {
   value: string;
   onChange: (newValue: string) => void;
 };
 
 export default function SearchBar({ value, onChange }: Props) {
+
+    const inputRef = useRef<HTMLInputElement>(null)
+
+    useEffect(() => { inputRef.current?.focus() }
+    ,[]);
+
   return (
     <div style={{ marginBottom: 12 }}>
       <label style={{ display: "block", marginBottom: 6 }}>
