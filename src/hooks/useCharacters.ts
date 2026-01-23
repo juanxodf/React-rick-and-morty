@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fetchCharacters } from "../api/rmApi";
 import type { Character } from "../types/rickAndMorty";
 
@@ -13,9 +13,13 @@ export function useCharacters(query: string, status: StatusValue) {
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const requestCountRef = useRef(0);
+
   useEffect(() => {
     setLoading(true);
     setError(null);
+
+    requestCountRef.current++
 
     fetchCharacters({ page: 1, name: query.trim(), status })
       .then((data) => {
@@ -32,6 +36,8 @@ export function useCharacters(query: string, status: StatusValue) {
 
     const nextPage = page + 1;
     setLoadingMore(true);
+
+    requestCountRef.current++
 
     try {
       const data = await fetchCharacters({
@@ -57,5 +63,6 @@ export function useCharacters(query: string, status: StatusValue) {
     hasMore,
     loadingMore,
     loadMore,
+    requestCountRef
   };
 }

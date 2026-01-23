@@ -12,7 +12,7 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<StatusValue>("");
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const { characters, loading, error, hasMore, loadingMore, loadMore } = useCharacters(query, status);
+  const { characters, loading, error, hasMore, loadingMore, loadMore, requestCountRef } = useCharacters(query, status);
   const selectedCharacter = useMemo(
     () => (selectedId ? characters.find((character) => character.id === selectedId) ?? null : null),
     [characters, selectedId]
@@ -22,7 +22,12 @@ export default function App() {
     <div className="page">
       <header className="header">
         <h1>Rick and Morty</h1>
-        <SearchBar value={query} onChange={setQuery} />
+        <SearchBar value={query} onChange={setQuery} /> 
+
+        <p style={{ fontSize: 12, opacity: 0.6 }}>
+          Peticiones realizadas: {requestCountRef.current}
+        </p>
+        
         <StatusFilter value={status} onChange={setStatus} />
       </header>
 
