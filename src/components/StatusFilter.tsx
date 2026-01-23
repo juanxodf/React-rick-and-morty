@@ -6,14 +6,16 @@ type Props = {
 };
 
 export default function StatusFilter({ value, onChange }: Props) {
+  const selectId = "status-filter";
   return (
     <div style={{ marginBottom: 12 }}>
 
-      <label style={{ display: "block", marginBottom: 6 }}>
+      <label htmlFor={selectId} style={{ display: "block", marginBottom: 6 }}>
         Filtrar por estado:
       </label>
 
       <select
+        id={selectId}
         value={value}
         onChange={(e) => onChange(e.target.value as StatusValue)}
         style={{ padding: 8, width: "100%", maxWidth: 220 }}

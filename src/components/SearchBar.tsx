@@ -6,6 +6,7 @@ type Props = {
 };
 
 export default function SearchBar({ value, onChange }: Props) {
+  const inputId = "search-character";
 
     const inputRef = useRef<HTMLInputElement>(null)
 
@@ -14,11 +15,12 @@ export default function SearchBar({ value, onChange }: Props) {
 
   return (
     <div style={{ marginBottom: 12 }}>
-      <label style={{ display: "block", marginBottom: 6 }}>
+      <label htmlFor={inputId} style={{ display: "block", marginBottom: 6 }}>
         Buscar personaje:
       </label>
 
       <input
+        id={inputId}
         type="text"
         placeholder="Ej: Rick"
         value={value}
