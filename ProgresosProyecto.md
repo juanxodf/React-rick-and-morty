@@ -55,3 +55,15 @@ Para ello, se ha añadido un selector que guarda la opción elegida en el estado
 Esta funcionalidad se ha integrado junto con la búsqueda por nombre, permitiendo combinar ambos criterios de forma simultánea. De esta manera, el usuario puede refinar los resultados según sus intereses.
 
 Con esta fase se refuerza el uso del estado y de los efectos en React, comprendiendo cómo distintos valores pueden influir en una misma petición y provocar la actualización dinámica de la interfaz.
+
+<br>
+
+# 🧩 FASE 4 — Selección de personaje y vista de detalle
+
+En esta fase se ha añadido la funcionalidad de selección de personajes, permitiendo al usuario hacer clic sobre una tarjeta para visualizar su información detallada.
+
+Al seleccionar un personaje, sus datos se muestran en un panel de detalle independiente del listado principal, donde se presenta información más completa como el estado, la especie, el género, el origen y la ubicación actual.
+
+El personaje seleccionado se guarda en un estado propio, lo que permite que su información permanezca visible aunque se modifique la búsqueda o el filtro aplicado. De este modo, el detalle no depende del listado mostrado en cada momento, evitando que desaparezca al actualizar los resultados.
+
+Con esta fase se mejora la experiencia de usuario y se afianza la comprensión del manejo del estado en React, diferenciando entre los datos que cambian dinámicamente y aquellos que deben mantenerse estables.
