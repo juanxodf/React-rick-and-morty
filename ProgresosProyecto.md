@@ -43,3 +43,15 @@ Además, se ha incorporado el enfoque automático del campo de búsqueda al carg
 Durante el desarrollo de esta fase surgió un pequeño desliz, ya que inicialmente la aplicación no actualizaba los personajes mostrados al cambiar la búsqueda. Esto se debía a que no se estaba teniendo en cuenta la variación del valor introducido en el input al realizar la petición. Tras revisar el funcionamiento del estado y las dependencias del efecto, se corrigió el problema, logrando que el listado se actualice correctamente en función del texto introducido.
 
 Esta fase ha permitido comprender mejor la relación entre el estado, los efectos y las llamadas a la API, consolidando el funcionamiento dinámico de la aplicación.
+
+<br>
+
+# 🧩 FASE 3 — Filtro de personajes por estado
+
+En esta fase se ha incorporado un sistema de filtrado que permite seleccionar los personajes según su estado: Alive, Dead o Unknown.
+
+Para ello, se ha añadido un selector que guarda la opción elegida en el estado de la aplicación. Cada vez que el usuario modifica el filtro, se realiza automáticamente una nueva petición a la API, actualizando el listado de personajes mostrados en pantalla.
+
+Esta funcionalidad se ha integrado junto con la búsqueda por nombre, permitiendo combinar ambos criterios de forma simultánea. De esta manera, el usuario puede refinar los resultados según sus intereses.
+
+Con esta fase se refuerza el uso del estado y de los efectos en React, comprendiendo cómo distintos valores pueden influir en una misma petición y provocar la actualización dinámica de la interfaz.
