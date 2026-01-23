@@ -106,3 +106,23 @@ Esta fase permite afianzar el uso de useRef como una herramienta útil para cons
 
 <br>
 
+# 🧩 FASE 8 — Pruebas con Vitest
+
+En esta fase se han incorporado pruebas automáticas con el objetivo de comprobar que las principales funcionalidades de la aplicación funcionan correctamente.
+
+Se han realizado pruebas relacionadas con:
+- la carga inicial de personajes
+- la búsqueda por nombre
+- el filtrado por estado
+- la selección de un personaje y la visualización de su detalle
+
+Estas pruebas permiten verificar que la aplicación responde adecuadamente a las acciones del usuario y que los cambios en la interfaz se producen de forma correcta.
+
+La prueba que ha resultado más compleja ha sido la relacionada con la visualización del detalle del personaje, ya que fue necesario comprender cómo esperar a que la información aparezca en pantalla antes de comprobarla. En este punto fue necesario aprender a utilizar correctamente los métodos de espera, ya que los datos no se muestran de forma inmediata.
+
+Gracias a esta fase se ha podido entender mejor la importancia de las pruebas automáticas y cómo ayudan a asegurar el correcto funcionamiento de la aplicación a lo largo del desarrollo.
+
+<br>
+
+# Conclusión Final
+Este proyecto me ha resultado muy interesante, porque demuestra de forma clara cómo, con una estructura sencilla, se pueden realizar múltiples peticiones, organizar los resultados mediante filtros y comprobar funcionalidades de manera rápida. Además, las pruebas automáticas permiten identificar con precisión qué parte falla, lo que facilita la depuración y el aprendizaje durante el desarrollo.
