@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Rick and Morty Explorer (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React + TypeScript** que permite explorar personajes de la serie **Rick and Morty** consumiendo la **Rick and Morty API**.
 
-Currently, two official plugins are available:
+Incluye:
+- Listado de personajes (carga inicial desde la API)
+- Búsqueda por nombre (se actualiza al escribir)
+- Filtro por estado (Alive / Dead / Unknown)
+- Selección de personaje y vista de detalle (se mantiene aunque cambie la búsqueda o el filtro)
+- Paginación con botón **“Cargar más”**
+- Lógica de obtención de datos en un **custom hook**
+- Pruebas automáticas con **Vitest**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## API utilizada
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Documentación: https://rickandmortyapi.com/documentation
+- Endpoint principal: https://rickandmortyapi.com/api/character
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologías
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- Vite
+- Vitest
+- Testing Library
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Requisitos previos
+
+- **Node.js** (recomendado: versión 18 o superior)
+- **npm** (incluido con Node)
+
+---
+
+## Instalación y ejecución
+
+1. Clona el repositorio y entra en la carpeta:
+
+```bash
+git clone <URL_DEL_REPO>
+cd <NOMBRE_DEL_REPO>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2.	Instala dependencias:
+  ```bash
+npm install
 ```
+3.	Ejecuta el proyecto en modo desarrollo:
+
+```bash
+npm run dev
+```
+4.	Abre en el navegador la URL que aparezca en consola (normalmente):
+
+http://localhost:5173
+
+⸻
+
+Scripts disponibles
+•	Iniciar en modo desarrollo:
+  ```bash
+npm run dev
+```
+• Generar build de producción:
+```bash
+npm run build
+```
+•	Previsualizar la build:
+```bash
+npm run preview
+```
+•	Ejecutar tests:
+```bash
+npm run test
+```
+⸻
+
+Estructura del proyecto (resumen)
+	•	src/components/ → componentes visuales (tarjetas, listado, detalle, etc.)
+	•	src/hooks/ → custom hooks (lógica de API, estados, paginación…)
+	•	src/api/ → funciones para consumir la API
+	•	src/types/ → tipos TypeScript de la API
+	•	src/test/ → ficheros auxiliares de testing (fixtures y setup)
+
+Esta separación permite mantener el código ordenado, evitando mezclar la interfaz con la lógica de obtención de datos.
+
+⸻
+
+Pruebas incluidas
+
+Las pruebas automáticas verifican:
+	•	carga inicial de personajes
+	•	búsqueda por nombre
+	•	filtrado por estado
+	•	selección y visualización del detalle
+
+La prueba del detalle es la más delicada, ya que requiere esperar a que aparezca la información en pantalla antes de comprobarla.
