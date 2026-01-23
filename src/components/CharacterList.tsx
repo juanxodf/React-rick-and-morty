@@ -4,10 +4,10 @@ import CharacterCard from "./CharacterCard";
 type Props = {
   characters: Character[];
   selectId: number | null;
-  onSelect: (character: Character) => void;
+  onSelectId: (id: number) => void;
 };
 
-export default function CharacterList({ characters, selectId, onSelect }: Props) {
+export default function CharacterList({ characters, selectId, onSelectId }: Props) {
   return (
     <ul className="character-grid">
       {characters.map((character) => (
@@ -15,7 +15,7 @@ export default function CharacterList({ characters, selectId, onSelect }: Props)
           key={character.id}
           character={character}
           isSelected={selectId === character.id}
-          onSelect={() => onSelect(character)}
+          onSelect={() => onSelectId(character.id)}
         />
       ))}
     </ul>

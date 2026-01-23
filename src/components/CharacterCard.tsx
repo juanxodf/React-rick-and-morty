@@ -3,7 +3,7 @@ import type { Character } from "../types/rickAndMorty";
 type Props = {
   character: Character;
   isSelected: boolean;
-  onSelect: (character: Character) => void;
+  onSelect: () => void;
 };
 
 export default function CharacterCard({ character, isSelected, onSelect }: Props) {
@@ -11,7 +11,7 @@ export default function CharacterCard({ character, isSelected, onSelect }: Props
     <li>
       <button
       type="button"
-      onClick={() => onSelect(character)}
+      onClick={onSelect}
       className={`character-card ${isSelected ? "selected" : ""}`}
       >
         <img 
