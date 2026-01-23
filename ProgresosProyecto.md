@@ -79,3 +79,18 @@ Para ello, se ha gestionado el número de página y se ha controlado si existen 
 Además, cuando se modifica la búsqueda o el filtro, la paginación se reinicia correctamente, mostrando de nuevo los resultados desde la primera página.
 
 Con esta fase se mejora la experiencia de usuario, permitiendo explorar el contenido de forma gradual y reforzando la comprensión del manejo del estado y la acumulación de datos en React.
+
+<br>
+
+# 🧩 FASE 6 — Creación de un custom hook
+
+En esta fase se ha reorganizado la lógica de la aplicación mediante la creación de un custom hook, con el objetivo de separar la obtención de datos de la interfaz.
+
+Toda la lógica relacionada con las peticiones a la Rick and Morty API, la gestión del estado de carga, los errores y la paginación se ha trasladado al hook useCharacters. De esta forma, el componente principal deja de encargarse de estas tareas y se centra únicamente en la presentación de la información.
+
+Esta separación permite que el código sea más claro, reutilizable y fácil de mantener, además de favorecer una mejor comprensión del funcionamiento de los hooks en React.
+
+Con esta fase se consolida el uso de los custom hooks como una herramienta clave para organizar la lógica de la aplicación de manera ordenada y eficiente.
+
+<br>
+
