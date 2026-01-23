@@ -94,3 +94,15 @@ Con esta fase se consolida el uso de los custom hooks como una herramienta clave
 
 <br>
 
+# 🧩 FASE 7 — Persistencia de valores con useRef
+
+En esta fase se ha trabajado la persistencia de valores utilizando el hook useRef.
+
+Para ello, se ha empleado un valor que permite contar el número de peticiones realizadas a la API. Este dato se mantiene entre renderizados, pero no provoca una nueva renderización de la interfaz cuando cambia.
+
+De esta forma se comprende la diferencia entre useState, que actualiza la vista, y useRef, que permite almacenar información interna sin afectar al rendimiento de la aplicación.
+
+Esta fase permite afianzar el uso de useRef como una herramienta útil para conservar datos persistentes dentro del ciclo de vida del componente.
+
+<br>
+
