@@ -57,7 +57,7 @@
 .character-content { display: flex; flex-direction: column; gap: 6px; }
 .character-name { margin: 0; font-size: 1.15rem; }
 
-/* Estado (ya lo tenías, lo dejamos) */
+/* Estado */
 .character-status { font-weight: 700; margin: 0; }
 .character-status.alive { color: #2ecc71; }
 .character-status.dead { color: #e74c3c; }
