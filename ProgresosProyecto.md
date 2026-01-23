@@ -67,3 +67,15 @@ Al seleccionar un personaje, sus datos se muestran en un panel de detalle indepe
 El personaje seleccionado se guarda en un estado propio, lo que permite que su información permanezca visible aunque se modifique la búsqueda o el filtro aplicado. De este modo, el detalle no depende del listado mostrado en cada momento, evitando que desaparezca al actualizar los resultados.
 
 Con esta fase se mejora la experiencia de usuario y se afianza la comprensión del manejo del estado en React, diferenciando entre los datos que cambian dinámicamente y aquellos que deben mantenerse estables.
+
+<br>
+
+# 🧩 FASE 5 — Paginación y carga de más personajes
+
+En esta fase se ha incorporado un sistema de paginación que permite cargar más personajes de forma progresiva mediante un botón “Cargar más”.
+
+Para ello, se ha gestionado el número de página y se ha controlado si existen más resultados disponibles, evitando realizar peticiones innecesarias. Al pulsar el botón, se solicita la siguiente página a la API y los nuevos personajes se añaden al listado existente sin eliminar los anteriores.
+
+Además, cuando se modifica la búsqueda o el filtro, la paginación se reinicia correctamente, mostrando de nuevo los resultados desde la primera página.
+
+Con esta fase se mejora la experiencia de usuario, permitiendo explorar el contenido de forma gradual y reforzando la comprensión del manejo del estado y la acumulación de datos en React.
