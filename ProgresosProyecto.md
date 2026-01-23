@@ -30,3 +30,16 @@ De esta forma, la aplicación responde correctamente ante las diferentes situaci
 
 Esta fase establece la base sobre la que se desarrollarán las siguientes funcionalidades del proyecto.
 
+<br>
+
+# 🧩 FASE 2 — Búsqueda de personajes
+
+En esta fase se ha implementado la funcionalidad de búsqueda de personajes por nombre mediante un campo de texto.
+
+Para ello, se ha añadido un input controlado que permite introducir el nombre del personaje, almacenando el valor en el estado de la aplicación. Cada vez que el usuario modifica el contenido del input, se realiza automáticamente una nueva petición a la API, actualizando el listado de personajes mostrados en pantalla.
+
+Además, se ha incorporado el enfoque automático del campo de búsqueda al cargar la vista, utilizando useRef, lo que permite mejorar la experiencia de uso sin provocar renderizados innecesarios.
+
+Durante el desarrollo de esta fase surgió un pequeño desliz, ya que inicialmente la aplicación no actualizaba los personajes mostrados al cambiar la búsqueda. Esto se debía a que no se estaba teniendo en cuenta la variación del valor introducido en el input al realizar la petición. Tras revisar el funcionamiento del estado y las dependencias del efecto, se corrigió el problema, logrando que el listado se actualice correctamente en función del texto introducido.
+
+Esta fase ha permitido comprender mejor la relación entre el estado, los efectos y las llamadas a la API, consolidando el funcionamiento dinámico de la aplicación.
