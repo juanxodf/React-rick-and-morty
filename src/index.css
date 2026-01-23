@@ -13,6 +13,14 @@
   .layout { grid-template-columns: 1fr; }
 }
 
+/* Panel de detalle fijo al hacer scroll */
+.detail-panel {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  height: fit-content;
+}
+
 /* Grid de personajes */
 .character-grid {
   list-style: none;
@@ -69,8 +77,6 @@
   border-radius: 14px;
   padding: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 16px;
 }
 
 .detail-image {

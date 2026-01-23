@@ -91,7 +91,7 @@ export default function App() {
           )}
         </section>
 
-        <aside>
+        <aside className="detail-panel">
           {selectedCharacter ? (
             <CharacterDetail character={selectedCharacter} />
           ) : (
